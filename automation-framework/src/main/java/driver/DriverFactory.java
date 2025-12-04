@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -28,7 +29,6 @@ public class DriverFactory {
 
         switch (getBrowserType()) {
             case "chrome" -> {
-//                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/java/driver/drivers/chromedriver");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
@@ -45,6 +45,16 @@ public class DriverFactory {
                 chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
                 chromeOptions.addArguments("--disable-notifications");
 
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
+                chromeOptions.addArguments("--disable-extensions");
+                chromeOptions.addArguments("--disable-infobars");
+                chromeOptions.addArguments("--disable-popup-blocking");
+                chromeOptions.addArguments("--start-maximized");
+                chromeOptions.addArguments("--remote-allow-origins=*");
+
+                chromeOptions.addArguments("--disable-features=VizDisplayCompositor");
+
                 if (isHeadless) {
                     chromeOptions.addArguments("--headless=new");
                     chromeOptions.addArguments("--window-size=1920,1080");
@@ -55,6 +65,9 @@ public class DriverFactory {
                 }
 
                 driver = new ChromeDriver(chromeOptions);
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+                driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
                 break;
             }
             case "firefox" -> {

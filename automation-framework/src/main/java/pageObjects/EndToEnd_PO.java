@@ -214,7 +214,7 @@ public class EndToEnd_PO extends Base_PO{
 
     public void goToPdpFirstProduct() {
         goToProductDetailPage(productNames.getFirst());
-        waitInSeconds(2);
+        waitInSeconds(1);
     }
 
     public void verifyProductDetailPage() {
@@ -265,7 +265,6 @@ public class EndToEnd_PO extends Base_PO{
 
     public void clickCart() {
         clickElement(cartIcon);
-        waitInSeconds(3);
     }
 
     public void verifyCheckout1() {

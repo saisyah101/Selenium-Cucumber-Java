@@ -117,6 +117,7 @@ public class Auth_PO extends Base_PO{
 
     public void navigateToHomepage() {
         navigateToURL(Global_Vars.TOOLSHOP_URL);
+        waitInSeconds(3);
     }
 
     public void navigateToRegisterPage(){
@@ -248,3 +249,4 @@ public class Auth_PO extends Base_PO{
 
 
 }
+

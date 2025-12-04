@@ -116,6 +116,7 @@ public class Product_PO extends Base_PO{
 
     public void clickSearch() {
         clickElement(searchButton);
+        waitInSeconds(2);
 
     }
 
@@ -140,6 +141,7 @@ public class Product_PO extends Base_PO{
 
     public void clickReset() {
         clickElement(resetButton);
+        waitInSeconds(2);
     }
 
     public void searchCaptionNotDisplayed() {
@@ -147,7 +149,7 @@ public class Product_PO extends Base_PO{
     }
 
     public void defaultProductDisplayed() {
-        waitInSeconds(4);
+        waitInSeconds(2);
         waitFor(productDefaultPlier);
     }
 
@@ -157,6 +159,7 @@ public class Product_PO extends Base_PO{
 
     public void setMaxPriceSlider(String targetValue) {
         moveSlider(sliderMax, fullSlider, targetValue);
+        waitInSeconds(2);
     }
 
     public String getMinPriceValue() {
@@ -268,6 +271,7 @@ public class Product_PO extends Base_PO{
     public void verifySelectedCategory(String category) {
         isCheckboxSelected(category);
         scrollToElement(sortDropdown);
+        waitInSeconds(2);
     }
 
 
@@ -396,7 +400,7 @@ public class Product_PO extends Base_PO{
 
     public void removeProductFav() {
         clickElement(removeFavButton);
-        waitInSeconds(5);
+        waitInSeconds(3);
     }
 
     public void verify_product_removed() {

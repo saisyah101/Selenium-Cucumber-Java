@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                tags="@E2E", monochrome = true,
+                tags="@user-transaction", monochrome = true,
                 plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"})
 public class MainRunner extends AbstractTestNGCucumberTests {
     @Override

@@ -206,9 +206,9 @@ public class Base_PO {
         System.out.println("Result: " + newValue + " (expected: " + target + ")");
 
         if (difference <= 1) {
-            System.out.println("✅ Success! (tolerance: ±1)");
+            System.out.println("Success! (tolerance: ±1)");
         } else {
-            System.out.println("⚠️ Difference: " + difference + " (might need adjustment)");
+            System.out.println("Difference: " + difference + " (might need adjustment)");
         }
 
     }
@@ -380,7 +380,7 @@ public class Base_PO {
             System.out.println("Element not in viewport, scrolling...");
             scrollToElement(element);
         } else {
-            System.out.println("✅ Element already in viewport");
+            System.out.println("Element already in viewport");
         }
     }
 
@@ -416,7 +416,7 @@ public class Base_PO {
             scrollToElementIfNeeded(checkbox);
 
             clickElement(checkbox);
-            waitInSeconds(1);
+            waitInSeconds(2);
             System.out.println("Selected checkbox: " + label);
         } else {
             System.out.println("Checkbox already selected: " + label);
