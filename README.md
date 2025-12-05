@@ -9,15 +9,15 @@ A BDD (Behavior-Driven Development) test automation framework for  [Practice Sof
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Running Tests](#running-tests)
-- [Test Scenario](#test-scenario)
+- [Test Scenarios](#test-scenarios)
 - [Author](#author)
 
 ## Overview
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 This framework demonstrates test automation practices for testing ToolShop e-commerce website. Built with BDD methodology, it provides comprehensive test coverage for authentication, product management, checkout processes, and end-to-end user journeys.
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
+
 
 ## Features
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <li>BDD Framework: cucumber with Gherkin syntax for readable test scenarios</li>
 <li>Page Object Model: modular and maintainable page object architecture</li>
 <li>Multi-Browser Support: chrome and Firefox with configurable options</li>
@@ -26,9 +26,10 @@ This framework demonstrates test automation practices for testing ToolShop e-com
 <li>Dynamic Test Data: random data generation for unique test scenarios</li>
 <li>Video Recording: optional screen recording with WebM conversion</li>
 <li>Comprehensive Assertions: detailed validation methods</li>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
+
 
 ## Project Structure
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <pre>
 automation-framework/
 ├── src/
@@ -67,17 +68,18 @@ automation-framework/
 ├── .gitignore
 └── README.md
 </pre>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
+
 
 ## Prerequisites
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <li>Java JDK 21 or higher</li>
 <li>Maven 3.6+</li>
 <li>Chrome Browser (for Chrome tests)</li>
 <li>Firefox Browser (for Firefox tests)</li>
 <li>FFmpeg (optional, for video recording conversion)</li>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 
 ## Installation
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <h3>1. Clone the repository</h3>
 <pre>git clone https://github.com/saisyah101/Selenium-Cucumber-Java.git
 cd Selenium-Cucumber-Java/automation-framework</pre>
@@ -89,9 +91,10 @@ cd Selenium-Cucumber-Java/automation-framework</pre>
 Create or edit src/main/java/properties/config.properties:
 <pre>browser=chrome
 headless=false</pre>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
+
 
 ## Configuration 
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <h3>Browser Configuration<br></h3>
 <p>Edit <code>config.properties</code> or use system properties:</p>
 <pre># Run with Chrome
@@ -109,6 +112,7 @@ mvn test -Dheadless=true<br></pre>
 <h3>Video Recording</h3>
 <p>Enable/disable in <code>Hooks.java</code>:</p>
 <pre>private static final boolean ENABLE_VIDEO_RECORDING = false;</pre>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 
 ## Running Tests
 <h3>Run all tests</h3>
@@ -140,10 +144,10 @@ mvn test -DbrowserType=chrome<br>
 mvn test -DbrowserType=firefox<br>
 # Headless Chrome
 mvn test -DbrowserType=chrome -Dheadless=true</pre>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 
 
 ## Test Scenarios
-<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 <h3>Authentication Tests (Auth.feature)</h3>
 <h3>Positive Scenarios</h3>
 <li>Register new account and login</li>
@@ -198,6 +202,7 @@ mvn test -DbrowserType=chrome -Dheadless=true</pre>
 <li>Order confirmation</li>
 <li>Invoice generation</li>
 <li>Invoice verification</li>
+<div align="right"><a href="#table-of-contents">Back to Top</a></div>
 
 ## Author
 Siti Aisyah<br>
